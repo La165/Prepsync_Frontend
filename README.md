@@ -12,8 +12,11 @@ Built using modern frontend technologies with a scalable and responsive UI.
 Backend Url:https://prepsyncbackend-production.up.railway.app/
 
 🛠 Tech Stack
+
 ⚛️ React 18
+
 ⚡ Vite
+
 🎨 Tailwind CSS v4
 🔄 React Router DOM v7
 📡 Axios (API calls)
