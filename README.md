@@ -94,13 +94,20 @@ Add vercel.json for SPA routing:
     { "source": "/(.*)", "destination": "/" }
   ]
 }
+
+
+
 Add environment variables in Vercel dashboard
+
+
 🔐 Authentication Flow
 User logs in / registers
 Backend returns JWT token
 Token stored in localStorage
 Axios interceptor attaches token to requests
 Protected routes restrict unauthorized access
+
+
 📊 Key Highlights
 Modern React 18 architecture
 Scalable folder structure
@@ -108,8 +115,8 @@ Secure JWT authentication
 API-driven UI
 Responsive design for all devices
 Production-ready deployment setup
+
+
 👩‍💻 Author
-
 Lalitha
-
 GitHub: https://github.com/La165
