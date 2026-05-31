@@ -8,11 +8,11 @@ Built using modern frontend technologies with a scalable and responsive UI.
 
 👉 https://prepsync-frontend.vercel.app/
 
+🔗 Backend URL
 
-Backend Url:https://prepsyncbackend-production.up.railway.app/
+https://prepsyncbackend-production.up.railway.app/
 
 🛠 Tech Stack
-
 ⚛️ React 18
 ⚡ Vite
 🎨 Tailwind CSS v4
@@ -34,14 +34,13 @@ Backend Url:https://prepsyncbackend-production.up.railway.app/
 📁 Project Structure
 src/
 │
-├── components/        # Reusable UI components (Navbar, Sidebar, Layout)
-├── pages/             # Application pages (Login, Register, Dashboard, etc.)
-├── routes/            # Protected routing logic
-├── services/          # Axios API layer
-├── api.js/            # Api 
-├── App.jsx            # Main routing configuration
-├── main.jsx           # Entry point
-
+├── components/     # Reusable UI components (Navbar, Sidebar, Layout)
+├── pages/          # Application pages (Login, Register, Dashboard, etc.)
+├── routes/         # Protected routing logic
+├── services/       # Axios API layer
+├── api.js/         # API configuration
+├── App.jsx         # Main routing configuration
+├── main.jsx        # Entry point
 ⚙️ Installation & Setup
 1. Clone the repository
 git clone https://github.com/La165/prepsync-frontend.git
@@ -58,11 +57,9 @@ npm run dev
 
 App runs at:
 
-http://localhost:5173
+👉 http://localhost:5173
+
 🌍 API Integration
-
-Axios is used for backend communication:
-
 import axios from "axios";
 
 const API = axios.create({
@@ -89,17 +86,16 @@ dist/
 This project is deployed using Vercel.
 
 Important setup:
-Add vercel.json for SPA routing:
+
+Create vercel.json:
+
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
 }
 
-
-
-Add environment variables in Vercel dashboard
-
+Add environment variables in Vercel dashboard.
 
 🔐 Authentication Flow
 User logs in / registers
@@ -107,8 +103,6 @@ Backend returns JWT token
 Token stored in localStorage
 Axios interceptor attaches token to requests
 Protected routes restrict unauthorized access
-
-
 📊 Key Highlights
 Modern React 18 architecture
 Scalable folder structure
@@ -116,10 +110,7 @@ Secure JWT authentication
 API-driven UI
 Responsive design for all devices
 Production-ready deployment setup
-
-
 👩‍💻 Author
+
 Lalitha
 GitHub: https://github.com/La165
-
-
