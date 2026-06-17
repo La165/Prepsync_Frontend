@@ -1,152 +1,197 @@
 # 🚀 PrepSync Frontend
 
-PrepSync is a smart learning tracker web application designed to help students efficiently manage subjects, track topics, identify weak areas, and improve learning consistency.
+PrepSync is a smart learning tracker web application designed to help students efficiently manage subjects, track learning progress, identify weak areas, and maintain a consistent revision schedule.
 
-Built using modern frontend technologies with a scalable and responsive UI.
-
----
+The application provides an interactive dashboard, topic tracking, revision reminders, study planning, and progress analytics to help learners prepare effectively.
 
 ## 🌐 Live Demo
 
 👉 https://prepsync-frontend.vercel.app/
 
----
+## 🔗 Backend API
 
-## 🔗 Backend URL
-
-https://prepsyncbackend-production.up.railway.app/
-
----
-
-## 🛠 Tech Stack
-
-- ⚛️ React 18  
-- ⚡ Vite  
-- 🎨 Tailwind CSS v4  
-- 🔄 React Router DOM v7  
-- 📡 Axios (API calls)  
-- 📊 Recharts (data visualization)  
-- 🔔 React Hot Toast (notifications)  
-- 🎯 Lucide React (icons)  
+👉 https://prepsyncbackend-production.up.railway.app/
 
 ---
 
 ## ✨ Features
 
-- 🔐 User Authentication (Login / Register)  
-- 🧭 Protected Routes with JWT  
-- 📊 Interactive Dashboard  
-- 📚 Subject & Topic Management  
-- ⚠️ Weak Areas Analysis  
-- 🧠 Study Plan Module  
-- 🔁 Revision Tracking System  
-- 📈 Progress Visualization using Charts  
-- 📱 Fully Responsive UI  
+* 🔐 User Authentication (Login / Register)
+* 🧭 Protected Routes using JWT Authentication
+* 📊 Interactive Analytics Dashboard
+* 📚 Subject Management
+* 📝 Topic Tracking & Progress Monitoring
+* ⚠️ Weak Areas Identification
+* 🧠 Study Plan Management
+* 🔁 Revision Queue & Spaced Repetition Tracking
+* 📈 Progress Visualization using Charts
+* 📱 Responsive User Interface
 
 ---
 
-## 📁 Project Structure
+## 🛠 Tech Stack
 
+| Technology       | Purpose            |
+| ---------------- | ------------------ |
+| React 18         | Frontend Framework |
+| Vite             | Build Tool         |
+| Tailwind CSS     | UI Styling         |
+| React Router DOM | Routing            |
+| Axios            | API Communication  |
+| Recharts         | Data Visualization |
+| React Hot Toast  | Notifications      |
+| Lucide React     | Icons              |
+
+---
+
+## 📸 Application Screenshots
+
+### 🔐 Login
+
+![Login](screenshots/Login.png)
+
+### 📝 Register
+
+![Register](screenshots/Register.png)
+
+### 📊 Dashboard
+
+![Dashboard](screenshots/Dashboard.png)
+
+### 📚 Subjects Management
+
+![Subjects](screenshots/subjects.png)
+
+### 📝 Topics Management
+
+![Topics](screenshots/topics.png)
+
+### 🔁 Revision Queue
+
+![Revision Queue](screenshots/revision.png)
+
+### ⚠️ Weak Areas
+
+![Weak Areas](screenshots/weakareas.png)
+
+### 🧠 Study Plan
+
+![Study Plan](screenshots/studyplan.png)
+
+### 👤 Profile
+
+![Profile](screenshots/Profile.png)
+
+---
+
+## 🏗️ Frontend Architecture
+
+```text
 src/
 │
-├── components/     Reusable UI components (Navbar, Sidebar, Layout)
-├── pages/          Application pages (Login, Register, Dashboard, etc.)
-├── routes/         Protected routing logic
-├── services/       Axios API layer
-├── api.js          API configuration
-├── App.jsx         Main routing configuration
-├── main.jsx        Entry point
+├── components/      Reusable UI Components
+├── pages/           Application Pages
+├── services/        API Service Layer
+├── routes/          Protected Routes
+├── api/             Axios Configuration
+├── App.jsx          Route Configuration
+└── main.jsx         Application Entry Point
+```
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### Clone the repository
-git clone https://github.com/La165/prepsync-frontend.git  
-cd prepsync-frontend  
+### Clone Repository
 
-### Install dependencies
-npm install  
+```bash
+git clone https://github.com/La165/Prepsync_Frontend.git
+cd Prepsync_Frontend
+```
 
-### Setup environment variables
+### Install Dependencies
 
-Create a .env file in root:
+```bash
+npm install
+```
 
-VITE_API_URL=https://your-backend-url  
+### Configure Environment Variables
 
-### Run locally
-npm run dev  
+Create a `.env` file in the project root:
 
-App runs at:
-http://localhost:5173  
+```env
+VITE_API_URL=https://your-backend-url
+```
 
----
+### Run Application
 
-## 🌍 API Integration
+```bash
+npm run dev
+```
 
-import axios from "axios";
+Application runs at:
 
-const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
-});
-
-API.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-});
-
----
-
-## 🚀 Build for Production
-
-npm run build  
-
-Output folder:
-dist/
-
----
-
-## ☁️ Deployment (Vercel)
-
-Create vercel.json:
-
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
-}
-
-Add environment variables in Vercel dashboard.
+```text
+http://localhost:5173
+```
 
 ---
 
 ## 🔐 Authentication Flow
 
-- User logs in / registers
-- Backend returns JWT token
-- Token stored in localStorage
-- Axios interceptor attaches token
-- Protected routes block unauthorized access
+1. User registers or logs in
+2. Backend validates credentials
+3. JWT token is generated
+4. Token is stored in localStorage
+5. Axios interceptor attaches token automatically
+6. Protected routes restrict unauthorized access
 
 ---
 
-## 📊 Key Highlights
+## 🚀 Production Build
 
-- Modern React 18 architecture  
-- Scalable folder structure  
-- Secure JWT authentication  
-- API-driven UI  
-- Fully responsive design  
-- Production-ready deployment  
+```bash
+npm run build
+```
+
+Output directory:
+
+```text
+dist/
+```
+
+---
+
+## ☁️ Deployment
+
+### Frontend Hosting
+
+* Vercel
+
+### Backend Hosting
+
+* Railway
+
+### Database
+
+* MySQL
+
+---
+
+## 🎯 Key Highlights
+
+* Modern React 18 Architecture
+* Secure JWT Authentication
+* API Driven Design
+* Reusable Component Structure
+* Responsive UI
+* Data Visualization Dashboard
+* Production Ready Deployment
 
 ---
 
 ## 👩‍💻 Author
 
-Lalitha  
+**Lalitha**
+
 GitHub: https://github.com/La165
