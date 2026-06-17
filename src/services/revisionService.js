@@ -15,3 +15,11 @@ export const reviseTopic = async (id) => {
 
   return response.data;
 };
+
+export const getRevisionQueue = async () => {
+
+  const response =
+    await API.get("/topics/revision-queue");
+
+  return response.data;
+};

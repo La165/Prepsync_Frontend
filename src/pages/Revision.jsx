@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 import {
-  getOverdueTopics,
+  getRevisionQueue,
   reviseTopic,
 } from "../services/revisionService";
 
@@ -18,7 +18,7 @@ function Revision() {
     setLoading(true);
 
     try {
-      const data = await getOverdueTopics();
+      const data = await getRevisionQueue();
       setTopics(data || []);
     } catch (error) {
       console.log(error);
